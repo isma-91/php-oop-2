@@ -1,7 +1,6 @@
 <?php 
 
-class Toy extends Product{
-
-public $materials;
-
+class Toy extends Product
+{
+  public $materials;
 }

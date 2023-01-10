@@ -6,12 +6,12 @@ class Food extends Product
   public $ingredients = [];
 
   public function __construct($name, $description, $price, $ingredients)
-{
-  $this->name = $name;
-  $this->description = $description;
-  $this->price = $price;
-  $this->ingredients = $ingredients;
-}
+  {
+    $this->name = $name;
+    $this->description = $description;
+    $this->price = $price;
+    $this->ingredients = $ingredients;
+  }
 
 
 

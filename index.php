@@ -17,6 +17,7 @@ include_once __DIR__ . '/Food.php';
 include_once __DIR__ . '/User.php';
 include_once __DIR__ . '/Registered.php';
 include_once __DIR__ . '/CreditCard.php';
+include_once __DIR__ . '/CreditCardExpiration.php';
 
 ?>
 
@@ -44,7 +45,9 @@ include_once __DIR__ . '/CreditCard.php';
 
   <h2>Date</h2>
   <?php
-    var_dump(strtotime("m",$date1));
+    $exp = new CreditCardExpiration (10, 2022);
+    $sfag = new CreditCard('112345675', '333', $exp);
+    $sfag->is_valid();
   ?>
 
 </body>
