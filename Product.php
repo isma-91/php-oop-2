@@ -9,7 +9,8 @@ abstract class Product
 
 	public function setPrice($price) 
 	{
-		if (is_integer($price) && $price > 0) {
+		if (is_integer($price) && $price > 0)
+			{
 				$this->price = $price;
 			}
 	}
