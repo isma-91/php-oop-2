@@ -8,6 +8,18 @@ BONUS:
 Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibili solo in un periodo particolare (es. da maggio ad agosto).
 -->
 
+<?php
+
+include_once __DIR__ . '/Product.php';
+include_once __DIR__ . '/Toy.php';
+include_once __DIR__ . '/Kennel.php';
+include_once __DIR__ . '/Food.php';
+include_once __DIR__ . '/User.php';
+include_once __DIR__ . '/Registered.php';
+include_once __DIR__ . '/CreditCard.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +29,23 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
   <title>php-oop2</title>
 </head>
 <body>
-  
+  <h1>Biscotti</h1>
+  <?php
+    $biscotti = new Food ('biscotti', 'biscotti per cani', 38, ['farina', 'lievito', 'dolcificante', 'aromi']);
+    var_dump($biscotti);
+    echo $biscotti->getIngredients();
+  ?>
+
+  <h2>Nuovo utente</h2>
+  <?php
+    $reg = new Registered('Andrea', 'Rossi', '123456789012');
+    var_dump($reg);
+  ?>
+
+  <h2>Date</h2>
+  <?php
+    var_dump(strtotime("m",$date1));
+  ?>
+
 </body>
 </html>

@@ -17,7 +17,9 @@ class CreditCard
     if ($expiration_date < $now_date)
     {
         echo "La carta di credito è scaduta";
-      else 
+    }
+    else
+    { 
         echo "La carta di credito non è scaduta";
     }
   }

@@ -1,10 +1,11 @@
 <?php 
 
-class Products {
+class Product {
 
 public $name;
 public $description;
 protected $price;
+
 
 public function setPrice($price) 
 {
@@ -18,3 +19,4 @@ public function getPrice()
 return $this->price;
 }
 }
+
