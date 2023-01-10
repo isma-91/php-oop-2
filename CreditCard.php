@@ -12,9 +12,11 @@ class CreditCard
 		$this->expiration_date = $expiration_date;
 	}
 
-  public function is_valid($expiration_date, $now_date)
+  public function is_valid()
   {
-    if ($expiration_date < $now_date)
+    $this->expiration_date = 
+    $now_date = date("m/y");
+    if ($this->expiration_date < $now_date)
     {
         echo "La carta di credito è scaduta";
     }
