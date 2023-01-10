@@ -43,11 +43,18 @@ include_once __DIR__ . '/CreditCardExpiration.php';
     var_dump($reg);
   ?>
 
-  <h2>Date</h2>
+  <h2>Carta scaduta</h2>
   <?php
-    $exp = new CreditCardExpiration (10, 2025);
-    $sfag = new CreditCard('112345675', '333', $exp);
-    $sfag->is_valid();
+    $expired = new CreditCardExpiration (1, 2020);
+    $CD1 = new CreditCard('112345675', '333', $expired);
+    $CD1->is_valid();
+  ?>
+
+  <h2>Carta NON scaduta</h2>
+  <?php
+    $not_expired = new CreditCardExpiration (10, 2025);
+    $CD2 = new CreditCard('112342145', '999', $not_expired);
+    $CD2->is_valid();
   ?>
 
 </body>
