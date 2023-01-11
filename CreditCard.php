@@ -15,6 +15,31 @@ class CreditCard
 		$this->expiration_date = $expiration_date;
 	}
 
+  // public function is_valid()
+  // {
+  //   // $this->expiration_date->year
+  //   $now_month = intval(date("m"));
+  //   $now_year = intval(date("Y"));
+  //   if ($this->expiration_date->year > $now_year)
+  //   {
+  //       echo "La carta di credito NON è scaduta";
+  //   }
+  //   elseif ($this->expiration_date->year < $now_year)
+  //   {
+  //       echo "La carta di credito È scaduta";
+  //   }
+  //   elseif  ($this->expiration_date->month < $now_month)
+  //   {
+  //       echo "La carta di credito È scaduta";
+  //   }
+  //   else
+  //   { 
+  //       echo "La carta di credito NON è scaduta";
+  //   }
+  //   // var_dump($now_month);
+  //   // var_dump($now_year);
+  // }
+
   public function is_valid()
   {
     // $this->expiration_date->year
@@ -26,11 +51,11 @@ class CreditCard
     }
     elseif ($this->expiration_date->year < $now_year)
     {
-        echo "La carta di credito È scaduta";
+        throw new Exception("La carta di credito È scaduta");
     }
     elseif  ($this->expiration_date->month < $now_month)
     {
-        echo "La carta di credito È scaduta";
+        throw new Exception("La carta di credito È scaduta");
     }
     else
     { 
