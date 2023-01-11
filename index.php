@@ -9,7 +9,7 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
 -->
 
 <?php
-
+include_once __DIR__ . '/DoseOfFood.php';
 include_once __DIR__ . '/Product.php';
 include_once __DIR__ . '/Toy.php';
 include_once __DIR__ . '/Kennel.php';
@@ -35,6 +35,8 @@ include_once __DIR__ . '/CreditCardExpiration.php';
     $biscotti = new Food ('biscotti', 'biscotti per cani', 38, ['farina', 'lievito', 'dolcificante', 'aromi']);
     var_dump($biscotti);
     echo $biscotti->getIngredients();
+    echo "<br>";
+    echo $biscotti->getDoseOfFood(40);
   ?>
 
   <h2>Nuovo utente</h2>

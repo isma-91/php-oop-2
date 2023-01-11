@@ -2,7 +2,7 @@
 
 class Food extends Product 
 {
-
+  use DoseOfFood;
   public $ingredients = [];
 
   public function __construct($name, $description, $price, $ingredients)
